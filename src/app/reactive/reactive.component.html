@@ -1,0 +1,57 @@
+<form [formGroup]="reactive" (ngSubmit)="onSubmit()">
+  <div>
+    <h3>Dane podstawowe</h3>
+    <div class="imie">
+      <label for="imie">Imię</label>
+      <input type="text" name="imie" formControlName="imie" />
+    </div>
+    <br />
+    <div class="nazwisko">
+      <label for="Nazwisko">Nazwisko</label>
+      <input type="text" name="Nazwisko" formControlName="nazwisko" />
+    </div>
+    <br />
+    <div class="email">
+      <label for="Email">Email</label>
+      <input type="text" name="Email" formControlName="email" />
+    </div>
+    <br />
+    <br />
+    <label for="telefon"
+      >Telefon stacjonarny:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+    >
+    <label for="kierunkowy">Kierunkowy</label>
+    <input type="number" name="Kierunkowy" formControlName="kierunkowy" />
+    <input
+      type="number"
+      name="Telefon stacjonarny"
+      formControlName="stacjonarny"
+    />
+    <label for="wewn" name="wewn">wewn.</label>
+    <input type="number" name="wewn" formControlName="wewn" />
+    <br />
+    <label for="komorkowy" name="wewn">tel. komorkowy:</label>
+    <input type="text" name="komorkowy" formControlName="komorkowy" />
+    <br />
+    <h3>Dane do wystawienia faktury</h3>
+    <a>Odbiorca&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <label for="pryw">Osoba prywatna</label>
+    <input
+      type="radio"
+      name="Odbiorca"
+      formControlName="odbiorca"
+      value="osoba prywatna"
+    />
+    <label for="firm">Firma</label>
+    <input
+      type="radio"
+      name="Odbiorca"
+      formControlName="odbiorca"
+      value="firma"
+    />
+    <br />
+    <input type="submit" value="dupa" />
+  </div>
+
+  <app-reactive></app-reactive>
+</form>

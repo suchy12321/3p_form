@@ -1,0 +1,36 @@
+body * {
+  font-family: sans-serif;
+}
+
+h3 {
+  background-color: #297a2c;
+  margin-bottom: 0%;
+  height: 2em;
+}
+
+.imie,
+.email {
+  display: flex;
+  background-color: #f6fbeb;
+  height: 2em;
+  justify-content: right;
+  align-items: center;
+}
+
+.nazwisko {
+  display: flex;
+  background-color: #f2f9e0;
+  height: 2em;
+  align-items: center;
+  justify-content: right;
+  border-top: 2px #e3f1c3 solid;
+  border-bottom: 2px #e3f1c3 solid;
+}
+
+input[type="text"]{
+  width: 10%;
+}
+
+input[type="number"]{
+  width: 10%;
+}

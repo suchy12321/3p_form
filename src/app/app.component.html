@@ -1,0 +1,56 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <h3>Dane podstawowe</h3>
+    <div class="imie">
+      <label for="imie">Imię</label>
+      <input type="text" name="imie" [(ngModel)]="dane.imie" />
+    </div>
+    <br />
+    <div class="nazwisko">
+      <label for="Nazwisko">Nazwisko</label>
+      <input type="text" name="Nazwisko" [(ngModel)]="dane.nazwisko" />
+    </div>
+    <br />
+    <div class="email">
+      <label for="Email">Email</label>
+      <input type="text" name="Email" [(ngModel)]="dane.email" />
+    </div>
+    <br />
+    <br />
+    <label for="telefon"
+      >Telefon stacjonarny:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+    >
+    <label for="kierunkowy">Kierunkowy</label>
+    <input type="number" name="Kierunkowy" [(ngModel)]="dane.kierunkowy" />
+    <input
+      type="number"
+      name="Telefon stacjonarny"
+      [(ngModel)]="dane.stacjonarny"
+    />
+    <label for="wewn" name="wewn">wewn.</label>
+    <input type="number" name="wewn" [(ngModel)]="dane.wewn" />
+    <br />
+    <label for="komorkowy" name="wewn">tel. komorkowy:</label>
+    <input type="text" name="komorkowy" [(ngModel)]="dane.komorkowy" />
+    <br />
+    <h3>Dane do wystawienia faktury</h3>
+    <a>Odbiorca&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <label for="pryw">Osoba prywatna</label>
+    <input
+      type="radio"
+      name="Odbiorca"
+      [(ngModel)]="dane.odbiorca"
+      value="osoba prywatna"
+    />
+    <label for="firm">Firma</label>
+    <input
+      type="radio"
+      name="Odbiorca"
+      [(ngModel)]="dane.odbiorca"
+      value="firma"
+    />
+    <br />
+    <input type="submit" value="dupa" />
+  </div>
+</form>
+<app-reactive></app-reactive>
