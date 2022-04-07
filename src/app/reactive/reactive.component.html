@@ -50,8 +50,6 @@
       value="firma"
     />
     <br />
-    <input type="submit" value="dupa" />
+    <input type="submit" value="dupa" [disabled]="!reactive.valid" />
   </div>
-
-  <app-reactive></app-reactive>
 </form>

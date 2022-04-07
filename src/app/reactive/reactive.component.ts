@@ -8,16 +8,22 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ReactiveComponent {
   reactive = new FormGroup({
     imie: new FormControl(''),
-    nazwisko: new FormControl(''),
+    nazwisko: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+    ]),
     email: new FormControl(''),
     kierunkowy: new FormControl(''),
     stacjonarny: new FormControl(''),
     wewn: new FormControl(''),
-    komorkowy: new FormControl(''),
+    komorkowy: new FormControl('', [
+      Validators.required,
+      Validators.minLength(9),
+    ]),
     odbiorca: new FormControl(''),
   });
 
   onSubmit() {
-    console.log(this.reactive.get('imie').value);
+    console.log(this.reactive);
   }
 }
