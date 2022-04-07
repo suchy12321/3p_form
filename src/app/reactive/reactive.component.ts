@@ -16,7 +16,5 @@ export class ReactiveComponent {
     komorkowy: new FormControl(''),
     odbiorca: new FormControl(''),
   });
-  onSubmit() {
-    console.log(this.reactive);
-  }
+
 }
