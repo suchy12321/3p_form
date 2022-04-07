@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class ReactiveComponent {
   reactive = new FormGroup({
-    imie: new FormControl(''),
+    imie: new FormControl('', [Validators.required, Validators.minLength(2)]),
     nazwisko: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
@@ -19,6 +19,7 @@ export class ReactiveComponent {
     komorkowy: new FormControl('', [
       Validators.required,
       Validators.minLength(9),
+      Validators.maxLength(9),
     ]),
     odbiorca: new FormControl(''),
   });
