@@ -17,4 +17,7 @@ export class ReactiveComponent {
     odbiorca: new FormControl(''),
   });
 
+  onSubmit() {
+    console.log(this.reactive.get('imie').value);
+  }
 }
